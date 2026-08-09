@@ -1,0 +1,158 @@
+/* styles.css
+   Extracted from the provided page. Save as styles.css and link from your HTML.
+*/
+
+:root{
+  --brand-blue: #007BFF;
+  --brand-dark: #3c3b3b;
+  --muted: #666;
+  --card-bg: #fff;
+  --page-bg: #f4f4f4;
+  --text: #333;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background-color:var(--page-bg);
+  /* background image (replace path as needed) */
+  background-image: url("image/qwer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:inherit}
+
+/* Header */
+header{
+  background:var(--brand-blue);
+  color:#fff;
+  padding:20px;
+  text-align:center;
+}
+
+/* Skip link for keyboard users */
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  left: 10px;
+  top: 10px;
+  width:auto;
+  height:auto;
+  padding:8px 12px;
+  background:#000;
+  color:#fff;
+  z-index:1000;
+}
+
+/* Navigation */
+nav{
+  background:var(--brand-dark);
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:700;
+  display:inline-block;
+  padding:6px 8px;
+}
+nav a:focus, nav a:hover{
+  color:#FFD700;
+  outline:2px solid rgba(255,215,0,0.12);
+  outline-offset:2px;
+  border-radius:4px;
+}
+
+/* Profile */
+.profile-section{
+  display:flex;
+  justify-content:center;
+  margin-top:28px;
+}
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #000;
+  display:block;
+}
+
+/* Main container */
+.container{
+  max-width:900px;
+  margin:20px auto 40px;
+  background:var(--card-bg);
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  text-align:left;
+}
+
+h1,h2,h3{margin:0 0 10px 0}
+h2{color:#0056b3}
+p{margin:6px 0}
+ul{margin:8px 0 16px 20px}
+
+.meta{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.contact a{
+  color:var(--brand-blue);
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Call to action / buttons */
+.cta{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-top:14px;
+}
+
+button{
+  background:var(--brand-blue);
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  cursor:pointer;
+  border-radius:6px;
+  font-weight:600;
+}
+button:focus{outline:3px solid rgba(0,123,255,0.25)}
+button:hover{background:#0056b3}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:15px;
+  background:#333;
+  color:#fff;
+  margin-top:30px;
+}
+
+/* Responsive */
+@media (max-width:520px){
+  .container{margin:12px 12px 30px;padding:16px}
+  nav a{margin:0 8px;font-size:14px}
+  .profile-img{width:120px;height:120px}
+}
